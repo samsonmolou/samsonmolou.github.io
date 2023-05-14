@@ -20,10 +20,21 @@ import redux from "./tech/redux.png";
 import tailwind from "./tech/tailwind.png";
 import typescript from "./tech/typescript.png";
 import threejs from "./tech/threejs.svg";
+import uipath from "./tech/uipath.png";
+import sap from "./tech/sap.png";
+import blueprism from "./tech/blueprism.svg";
+import symfony from "./tech/symfony.jpg";
+import laravel from "./tech/laravel.png";
+import rails from "./tech/rails.png";
 
 import meta from "./company/meta.png";
 import shopify from "./company/shopify.png";
 import starbucks from "./company/starbucks.png";
+import fcbai from "./company/fcbai.png";
+import ey from "./company/ey.png";
+import atos from "./company/atos.png";
+import mtn from "./company/mtn.svg";
+
 import tesla from "./company/tesla.png";
 
 import carrent from "./carrent.png";
@@ -59,4 +70,14 @@ export {
   carrent,
   jobit,
   tripguide,
+  fcbai,
+  ey,
+  atos,
+  mtn,
+  sap,
+  uipath,
+  blueprism,
+  symfony,
+  laravel,
+  rails,
 };

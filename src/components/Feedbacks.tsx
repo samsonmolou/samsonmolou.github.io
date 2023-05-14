@@ -1,8 +1,28 @@
+import { Tilt } from "react-tilt";
+import { motion } from "framer-motion";
+
+import { styles } from "../styles";
+import { github } from "../assets";
+import { SectionWrapper } from "../hoc";
+import { projects } from "../constants";
+import { fadeIn, textVariant } from "../utils/motion";
 
 const Feedbacks = () => {
   return (
-    <div>Feedbacks</div>
-  )
-}
+    <div className={`mt-12 bg-black-100 rounded-[20px]`}>
+      <div
+        className={`bg-tertiary rounded-2xl ${styles.padding} min-h-[300px]`}
+      >
+        <motion.div variants={textVariant()}>
+          <p className={styles.sectionSubText}>What others say</p>
+          <h2 className={styles.sectionHeadText}>Testimonials.</h2>
+        </motion.div>
+      </div>
+      <div className={`-mt-20 pb-14 ${styles.paddingX} flex flex-wrap gap-7`}>
+        <h2 className={`font-thin mt-10`}>Coming Soon...</h2>
+      </div>
+    </div>
+  );
+};
 
-export default Feedbacks
+export default SectionWrapper(Feedbacks, "");
