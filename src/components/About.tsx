@@ -49,7 +49,7 @@ const About = () => {
         className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
       >
         I'm a skilled software engineer with experience in{" "}
-        <span className="text-[#bea0ff]">Technology Consulting</span> and
+        <span className="text-[#bea0ff]">Technology Consulting</span> and{" "}
         <span className="text-[#bea0ff]">
           Robotic Process Automation (UiPath, SAP iRPA, BluePrism, Power
           Automate)

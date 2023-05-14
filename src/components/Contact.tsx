@@ -6,6 +6,7 @@ import { styles } from "../styles";
 import { EarthCanvas } from "./canvas";
 import { SectionWrapper } from "../hoc";
 import { slideIn } from "../utils/motion";
+import { whatsapp } from "../assets";
 
 const Contact = () => {
   const formRef = useRef();
@@ -61,6 +62,18 @@ const Contact = () => {
         <p className={styles.sectionSubText}>Get in touch</p>
         <h3 className={styles.sectionHeadText}>Contact.</h3>
 
+        <div className="flex flex-row justify-center items-center mt-10">
+          <img src={whatsapp} alt="whatsapp" className="w-6 h-6 rounded-full object-cover mr-2" />{" "}
+          <p className={styles.sectionSubText}> {" "} (+225) 07 49 63 12 23</p>
+        </div>
+
+
+        <div className="flex flex-row justify-between items-center mt-8">
+          <div className="sm:w-80 w-40 sm:h-1 h-1 bg-gradient-to-r from-[#804dee]" />
+          <p className={styles.sectionSubText}>OR</p>
+          <div className="sm:w-80 w-40 sm:h-1 h-1 bg-gradient-to-l from-[#804dee]" />
+
+        </div>
 
         <form
           // @ts-ignore
