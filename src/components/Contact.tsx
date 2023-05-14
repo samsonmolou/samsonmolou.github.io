@@ -18,13 +18,13 @@ const Contact = () => {
 
   const [loading, setLoading] = useState(false);
 
-  const handleChange = (e) => {
+  const handleChange = (e: any) => {
     const { name, value } = e.target;
 
     setForm({ ...form, [name]: value });
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: any) => {
     e.preventDefault();
 
     setLoading(true);
@@ -43,7 +43,7 @@ const Contact = () => {
     ).then(() => {
       setLoading(false);
       alert("Thank you. I will get back to you as soon as possible.");
-    }), (error) => {
+    }), (error: any) => {
       setLoading(false);
 
       console.log(error);
@@ -61,7 +61,12 @@ const Contact = () => {
         <p className={styles.sectionSubText}>Get in touch</p>
         <h3 className={styles.sectionHeadText}>Contact.</h3>
 
-        <form ref={formRef} onSubmit={handleSubmit} className="mt-12 flex flex-col gap-8">
+
+        <form
+          // @ts-ignore
+          ref={formRef}
+          onSubmit={handleSubmit}
+          className="mt-12 flex flex-col gap-8">
           <label className="flex flex-col">
             <span className="text-white font-medium mb-4">Your Name</span>
             <input
@@ -87,7 +92,7 @@ const Contact = () => {
           <label className="flex flex-col">
             <span className="text-white font-medium mb-4">Your Message</span>
             <textarea
-              rows="7"
+              rows={7}
               name="message"
               value={form.message}
               onChange={handleChange}

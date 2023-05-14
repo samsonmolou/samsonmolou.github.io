@@ -6,7 +6,8 @@ import { services } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
 import { SectionWrapper } from "../hoc";
 
-const ServiceCard = ({ index, title, icon }) => {
+
+const ServiceCard = ({ index, title, icon }: { index: number, title: string, icon: string }) => {
   return (
     <Tilt className="xs:w-[250px] w-full">
       <motion.div
@@ -14,6 +15,7 @@ const ServiceCard = ({ index, title, icon }) => {
         className="w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card"
       >
         <div
+          // @ts-ignore
           options={{
             max: 45,
             scale: 1,
@@ -34,7 +36,10 @@ const ServiceCard = ({ index, title, icon }) => {
 const About = () => {
   return (
     <>
-      <motion.div>
+      <motion.div
+        // @ts-ignore
+        variants={textVariant()}
+      >
         <p className={styles.sectionSubText}>Introduction</p>
         <h2 className={styles.sectionHeadText}>Overview.</h2>
       </motion.div>

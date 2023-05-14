@@ -8,17 +8,18 @@ import {
 } from "@react-three/drei";
 import * as random from "maath/random";
 
-import CanvasLoader from "../CanvasLoader";
-
-const Stars = (props) => {
+const Stars = (props: any) => {
   const ref = useRef();
 
+  // @ts-ignore
   useFrame((state, delta) => {
+    // @ts-ignore
     ref.current.rotation.x -= delta / 10;
+    // @ts-ignore
     ref.current.rotation.y -= delta / 15;
   });
 
-  const sphere = random.inSphere(new Float32Array(5000), { radius: 1.2 });
+  const [sphere] = useState(() => random.inSphere(new Float32Array(5000), { radius: 1.2 }));
 
   return (
     <group rotation={[0, 0, Math.PI / 4]}>
@@ -42,6 +43,8 @@ const StarsCanvas = () => {
         <Suspense fallback={null}>
           <Stars />
         </Suspense>
+
+        <Preload all />
       </Canvas>
     </div>
   )

@@ -1,14 +1,12 @@
-import { Tilt } from "react-tilt";
 import { motion } from "framer-motion";
 
 import { styles } from "../styles";
-import { github } from "../assets";
 import { SectionWrapper } from "../hoc";
-import { projects, testimonials } from "../constants";
+import { testimonials } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
 
 
-const FeedbackCard = ({ index, testimonial, name, designation, company, image }) => (
+const FeedbackCard = ({ index, testimonial, name, designation, company, image }: { index: number, testimonial: string, name: string, designation: string, company: string, image: string }) => (
   <motion.div
     variants={fadeIn("", "spring", index * 0.5, 0.75)}
     className="bg-black-200 p-10 rounded-3xl xs:w-[320px] w-full"
@@ -41,7 +39,10 @@ const Feedbacks = () => {
       <div
         className={`bg-tertiary rounded-2xl ${styles.padding} min-h-[300px]`}
       >
-        <motion.div variants={textVariant()}>
+        <motion.div
+          // @ts-ignore
+          variants={textVariant()}
+        >
           <p className={styles.sectionSubText}>What others say</p>
           <h2 className={styles.sectionHeadText}>Testimonials.</h2>
         </motion.div>
